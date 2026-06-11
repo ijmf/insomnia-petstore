@@ -1,0 +1,160 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Petstore API
+meta:
+  id: wrk_c412bbe3b5e6415186bd88f5aa03b602
+  created: 1781143554516
+  modified: 1781143554516
+  description: ""
+collection:
+  - url: "{{ _.baseUrl }}/pet"
+    name: POST - Cadastrar Pet
+    meta:
+      id: req_7aae5a5f5350468cbc6c04674176dc4e
+      created: 1781143853542
+      modified: 1781143926540
+      isPrivate: false
+      description: ""
+      sortKey: -1781143853542
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "id": 0,
+          "name": "Rex",
+          "status": "available"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.6.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.baseUrl }}/pet/9223372036854775807"
+    name: GET - Buscar Pet por ID
+    meta:
+      id: req_d1eda23a0b384b1d8d65a192bdc02694
+      created: 1781143973287
+      modified: 1781144001208
+      isPrivate: false
+      description: ""
+      sortKey: -1781143973287
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.6.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.baseUrl }}/pet"
+    name: PUT - Atualizar Pet
+    meta:
+      id: req_5f041d1005854124aa730f09bcffbf2d
+      created: 1781144026352
+      modified: 1781144057137
+      isPrivate: false
+      description: ""
+      sortKey: -1781144026352
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "id": 9223372036854775807,
+          "name": "Rex Atualizado",
+          "status": "sold"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/12.6.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.baseUrl }}/pet/findByStatus?status=available"
+    name: GET - Buscar por Status
+    meta:
+      id: req_3441e4bfc7fe4e3d8d006d3f274c32de
+      created: 1781144073366
+      modified: 1781144089264
+      isPrivate: false
+      description: ""
+      sortKey: -1781144073366
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/12.6.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.baseUrl }}/pet/9223372036854775807"
+    name: DELETE - Remover Pet
+    meta:
+      id: req_4f870ea5e71d428eaf545109bd29aee9
+      created: 1781144105071
+      modified: 1781144225762
+      isPrivate: false
+      description: ""
+      sortKey: -1781144105071
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/12.6.0
+        description: ""
+        disabled: false
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_6f781ac73fb2fdefeb1da9ebca65bafd16f22e51
+    created: 1781143554522
+    modified: 1781143554522
+environments:
+  name: Base Environment
+  meta:
+    id: env_6f781ac73fb2fdefeb1da9ebca65bafd16f22e51
+    created: 1781143554519
+    modified: 1781143782410
+    isPrivate: false
+  data:
+    baseUrl: https://petstore.swagger.io/v2
+    "": ""
